@@ -1,27 +1,36 @@
 $(document).ready(function() {
 
-
     $('#print').click(function() {
       var name = $('#name').val();  
       var date = $('#date').val();
       var grandTotal = $('#totalprice').val();
-    
+
+      let modalContent = `
+      Name: ${name}<br>Date: ${date}<br>
+      <table class="table">
+      <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Item</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Amount</th>
+    </tr>
+    </thead>
+    <tbody>
+    ${insertRow()}
+    </tbody>
+    </table>
+    <hr>Grand Total: ${grandTotal}
+  `;
 
     
-      $('#modalBody').html(
-        "Name: " + name + 
-        "<br>\nDate: " + date +
-        "<hr>Total Price: " + grandTotal
-
-        );  
-      $('#myModal').modal('show');  // Show the modal
+      $('#modalBody').html(modalContent);  
+    $('#myModal').modal('show');  // Show the modal
     });
+    
 
     $('#add').click( function(){
 
-
-    
-    
 
       $("#row").append( `
           
@@ -36,7 +45,7 @@ $(document).ready(function() {
               </div>
               <div class="col-4 mt-3">
                   <div class="form-group">
-                      <input type="text" class="form-control quantity" placeholder="Quantity" />
+                      <input type="number" class="form-control quantity" placeholder="Quantity" />
                   </div>
               </div>
               <div class="col-4 mt-3">
@@ -46,8 +55,6 @@ $(document).ready(function() {
               </div>
           </div>
       `);
-
-      
 
   });
 
@@ -111,36 +118,22 @@ function copy(){
 }
 
 const menuItems = {
-  "Cheesekut": 6.50,
-  "Kek Batik": 6.50,
-  "Popsicle": 3.00,
+  "Popsicle": 1.00, 
   "Nasi Goreng Telur (Promo)": 2.00,
   "Nasi Lemak Ayam (Promo)": 3.00,
   "Nasi Goreng Ayam (Promo)": 3.00,
-  "Popia Kentang": 1.50,
-  "Karipap": 0.50,
-  "Kuih Teriga": 0.50,
-  "Maggie Koorns": 2.00,
   "Donut 1 Pcs": 1.00,
   "Donut 4 Pcs": 3.00,
-  "Donut Gula 1 Pcs": 1.00,
-  "Donut 1 Pcs (Promo)": 1.00,
-  "Donut Gula 1 Pcs (Promo)": 1.00,
   "Nasi Goreng Ayam": 4.00,
   "Nasi Lemak Ayam": 4.00,
   "Nasi Lemak Telur Mata": 3.00,
-  "Nasi Lemak Strawberry Telur Mata": 3.00,
   "Nasi Goreng Telur Mata": 3.00,
-  "Nasi Lemak Strawberry Ayam": 4.00,
   "Sandwich Telur": 3.00,
   "Chicken Popcorn": 4.00,
   "Spaghetti": 3.50,
   "Meatball": 4.00,
   "Bubur Ayam": 3.00,
   "Sosej Egg Rolls": 4.00,
-  "Kekabu Maggie": 4.00,
-  "Corndog": 3.00,
-  "Tart": 2.00,
   "Roti Sosej": 2.00,
   "Maggi Goreng Telur Mata": 3.00,
   "Maggi Goreng Kosong": 3.00,
@@ -148,23 +141,9 @@ const menuItems = {
   "Spaghetti (Promo)": 4.00,
   "Bekas Polisterine": 0.50,
   "Roti Sosej (Promo)": 1.00,
-  "Spaghetti (Promo) 2x": 5.00,
-  "Spaghetti (Promo) 3x": 7.00,
-  "Roti Sosej (Promo) 2x": 2.00,
-  "Roti Sosej (Promo) 3x": 3.00,
-  "Roti Pizza": 2.50,
-  "Chicken Popcorn (Promo)": 1.00,
   "Bubur Ayam (Promo)": 1.00,
   "Sosej Roll": 2.50,
   "Burger Ayam Crispy": 5.50,
-  "Chicken Popcorn 3x (Promo)": 3.00,
-  "Mac & Cheese": 5.00,
-  "Maggi Goreng Telur (Promo)": 3.00,
-  "Badge 3x": 2.00,
-  "Badge 1x": 1.00,
-  "Lanyard 1x": 3.00,
-  "Lanyard 2x": 5.00,
-  "Lanyard 1x (RM12)": 12.00,
   "Burger Ayam": 3.00,
   "Macaroni Ayam": 4.00,
   "Macaroni Telur": 3.00,
@@ -172,7 +151,6 @@ const menuItems = {
   "Kuey Teow Telur": 3.00,
   "Kuey Teow Ayam": 4.00,
   "Meatball (Promo)": 3.00,
-  "Macaroni Ayam (Promo)": 3.00,
   "Macaroni Telur (Promo)": 2.00,
   "Kuey Teow Ayam (Promo)": 3.00,
   "Kuey Teow Telur (Promo)": 2.00,
@@ -204,4 +182,48 @@ function updateTotal(){
 
   $('#totalprice').val(`RM ${grandTotal.toFixed(2)}`);
 
+}
+
+function insertRow(){
+
+    //iterating thru every dynamically inserted .input-group
+    let rows = '';
+    let x = 0
+  $('.input-group').each(function() {
+       
+    //use .closest() and .find() because its a dynamically inserted element
+  
+
+    const item = $(this).find('.form-select').val();
+    const quantity = $(this).find('.quantity').val();
+    const price = $(this).find('.price').val();
+
+    rows += `
+            <tr>
+              <th scope="row">${x+1}</th>
+              <td>${item}</td>
+              <td>${quantity}</td>
+              <td>${price}</td>
+            </tr>
+                    `;
+       x += 1;             
+    });
+
+    return rows
+
+}
+
+function printToPDF() {
+  
+  $('#myModal').modal('hide');
+
+  // Wait a tiny bit for the modal to fully hide before printing
+  setTimeout(function () {
+    var printContents = $('#modalBody').html();
+    var originalContents = $('body').html();
+
+    $('body').html(printContents);
+    window.print();
+     // restores original page and reloads to recover dynamic elements
+  }); // delay to let the modal finish closing animation
 }
