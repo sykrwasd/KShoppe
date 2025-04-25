@@ -103,7 +103,7 @@ $(document).ready(function() {
 
 });
 
-
+// tak guna dah copy(), save as future ref
 function copy(){
     const textToCopy = $('#modalBody').text();
 
