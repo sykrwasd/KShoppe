@@ -61,7 +61,9 @@ $(document).ready(function() {
 
   $('#remove').click( function(){
 
+
       $("#row .input-group").last().remove();
+      updateTotal();
       
   });
 
