@@ -31,7 +31,7 @@ $(document).ready(function() {
 
     $('#add').click( function(){
 
-
+      
       $("#row").append( `
           
          <div class="row input-group justify-content-center">
@@ -221,9 +221,12 @@ function printToPDF() {
   setTimeout(function () {
     var printContents = $('#modalBody').html();
     var originalContents = $('body').html();
+    $("body").css("background","white");
 
     $('body').html(printContents);
     window.print();
+    
+
      // restores original page and reloads to recover dynamic elements
   }); // delay to let the modal finish closing animation
 }
