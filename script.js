@@ -24,7 +24,7 @@ $(document).ready(function() {
   `;
 
     
-      $('#modalBody').html(modalContent);  
+     $('#modalBody').html(modalContent);  
     $('#myModal').modal('show');  // Show the modal
     });
     
