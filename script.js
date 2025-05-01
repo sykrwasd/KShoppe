@@ -6,7 +6,9 @@ $(document).ready(function() {
       var grandTotal = $('#totalprice').val();
 
       let modalContent = `
+      <div class = "modalText">
       Name: ${name}<br>Date: ${date}<br>
+      </div>
       <table class="table">
       <thead>
     <tr>
@@ -223,8 +225,11 @@ function printToPDF() {
   setTimeout(function () {
     var printContents = $('#modalBody').html();
     var originalContents = $('body').html();
-    $("body").css("background","white");
-    $("body").css("color","black");
+    $("body").css({
+      "background": "white",
+      "color": "black !important"
+    });
+    
 
     $('body').html(printContents);
     window.print();
