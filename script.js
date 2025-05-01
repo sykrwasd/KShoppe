@@ -224,6 +224,7 @@ function printToPDF() {
     var printContents = $('#modalBody').html();
     var originalContents = $('body').html();
     $("body").css("background","white");
+    $("body").css("color","black");
 
     $('body').html(printContents);
     window.print();
