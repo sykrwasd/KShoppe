@@ -124,6 +124,7 @@ function copy(){
 const menuItems = {
   "Donut 1 Pcs": 2.00,
   "Donut 4 Pcs": 5.00,
+  "Bubur" : 2.00,
   "Spaghetti" : 4.00,
   "Nasi Lemak Ayam": 4.00
 };
