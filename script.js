@@ -126,7 +126,16 @@ const menuItems = {
   "Donut 4 Pcs": 5.00,
   "Bubur" : 2.00,
   "Spaghetti" : 4.00,
-  "Nasi Lemak Ayam": 4.00
+  "Nasi Lemak Ayam": 4.00,
+  "Sandwitch" : 2.00,
+  "Popsicle Mix" : 1.00,
+  "Maggi Goreng Kosong" : 2.00,
+  "Kueteow Goreng Kosong" : 2.00,
+  "Maggi Goreng Telur" : 3.00,
+  "Kueteow Goreng Telur" : 3.00,
+  "Kueteow Goreng Ayam" : 4.00,
+
+
 };
   
 function selectList(){
