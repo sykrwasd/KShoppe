@@ -127,14 +127,16 @@ const menuItems = {
   "Bubur" : 2.00,
   "Spaghetti" : 4.00,
   "Nasi Lemak Ayam": 4.00,
-  "Sandwitch" : 2.00,
+  "Sandwitch" : 2.50,
   "Popsicle Mix" : 1.00,
   "Maggi Goreng Kosong" : 2.00,
   "Kueteow Goreng Kosong" : 2.00,
   "Maggi Goreng Telur" : 3.00,
   "Kueteow Goreng Telur" : 3.00,
   "Kueteow Goreng Ayam" : 4.00,
-
+  "Donut 1 Pcs (Promo)" : 1,
+  "Donut 4 Pcs (Promo)" : 5,
+  "Wedges" : 4,
 
 };
   
