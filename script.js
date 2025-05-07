@@ -135,7 +135,7 @@ const menuItems = {
   "Kueteow Goreng Telur" : 3.00,
   "Kueteow Goreng Ayam" : 4.00,
   "Donut 1 Pcs (Promo)" : 1,
-  "Donut 4 Pcs (Promo)" : 5,
+  "Donut 7 Pcs (Promo)" : 5,
   "Wedges" : 4,
 
 };
