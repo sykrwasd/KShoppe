@@ -137,6 +137,8 @@ const menuItems = {
   "Donut 1 Pcs (Promo)" : 1,
   "Donut 7 Pcs (Promo)" : 5,
   "Wedges" : 4,
+  "Kuih 1 Pcs" : 0.8,
+  "Kuih 4 Pcs" : 3,
 
 };
   
