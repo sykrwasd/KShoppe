@@ -128,19 +128,27 @@ const menuItems = {
   "Spaghetti" : 4.00,
   "Nasi Lemak Ayam": 4.00,
   "Sandwitch" : 2.50,
+  "Sandwitch (Promo)" : 2.00,
   "Popsicle Mix" : 1.00,
   "Maggi Goreng Kosong" : 2.00,
   "Kueteow Goreng Kosong" : 2.00,
   "Maggi Goreng Telur" : 3.00,
   "Kueteow Goreng Telur" : 3.00,
   "Kueteow Goreng Ayam" : 4.00,
-  "Donut 1 Pcs (Promo)" : 1,
-  "Donut 7 Pcs (Promo)" : 5,
-  "Wedges" : 4,
-  "Kuih 1 Pcs" : 0.8,
-  "Kuih 4 Pcs" : 3,
+  "Donut 1 Pcs (Promo)" : 1.00,
+  "Donut 7 Pcs (Promo)" : 5.00,
+  "Wedges" : 4.00,
+  "Kuih 1 Pcs" : 0.80,
+  "Kuih 4 Pcs" : 3.00,
 
+  // Combo items
+  "Donut (4) + Coffee" : 9.00,
+  "Sandwich + Sticky Milk" : 5.50,
+  "Donut (4) + Sticky Milk" : 8.00,
+  "Jagung + Sticky Milk" : 7.00,
+  "Nasi Lemak Ayam + Donut (4)" : 8.00
 };
+
   
 function selectList(){
   let option = '<option selected disabled >Select An item</option>' //header
