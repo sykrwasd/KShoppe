@@ -138,9 +138,9 @@ const menuItems = {
   "Donut 1 Pcs (Promo)" : 1.00,
   "Donut 7 Pcs (Promo)" : 5.00,
   "Wedges" : 4.00,
+  "Wedges (Promo)" : 3.00,
   "Kuih 1 Pcs" : 0.80,
   "Kuih 4 Pcs" : 3.00,
-
   // Combo items
   "Donut (4) + Coffee" : 9.00,
   "Sandwich + Sticky Milk" : 5.50,
