@@ -126,6 +126,7 @@ const menuItems = {
   "Donut 4 Pcs": 5.00,
   "Bubur" : 2.00,
   "Spaghetti" : 4.00,
+  "Spaghetti (Promo)" : 3.00,
   "Nasi Lemak Ayam": 4.00,
   "Sandwich" : 2.50,
   "Sandwich (Promo)" : 2.00,
@@ -141,7 +142,6 @@ const menuItems = {
   "Wedges (Promo)" : 3.00,
   "Kuih 1 Pcs" : 0.80,
   "Kuih 4 Pcs" : 3.00,
-  // Combo items
   "Donut (4) + Coffee" : 9.00,
   "Sandwich + Sticky Milk" : 5.50,
   "Donut (4) + Sticky Milk" : 8.00,
